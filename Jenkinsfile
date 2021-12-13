@@ -9,7 +9,15 @@ pipeline {
  options {
         skipStagesAfterUnstable()
    }
+stage('Deliver')  {
 
+  steps {
+
+    sh './jenkins/scripts/deliver.sh'
+
+    }
+
+  }              
 
   stages {
     stage('Build') {
